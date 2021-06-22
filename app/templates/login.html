@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-3 col-md-2"></div>
+    <div class="col-lg-6 col-md-8 login-box">
+        <div class="col-lg-12 login-key">
+            <img src='static/images/HVA.png'  width='400' class="fa fa-key" aria-hidden="true"></i>
+        </div>
+        <div class="col-lg-12 login-title">
+            IDO-Laad
+        </div>
+
+        <div class="col-lg-12 login-form">
+            <div class="col-lg-12 login-form">
+                <form method='POST' action=''>
+                    <!-- Some security or something uses Secret Key and protects Form -->
+                    {{ form.hidden_tag() }}
+
+                    <!-- <legend class='border-bottom mb-4'>Login</legend> -->
+                    <div class='form-group'>
+                        <label class="form-control-label">USERNAME</label>
+                        <!-- {{ form.email.label(class='form-control-label') }} -->
+
+                        {% if form.email.errors %}
+                            {{ form.email(class='form-control form-control-lg is-invalid') }}
+                            <div class='invalid-feedback'>
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class='form-control form-control-lg') }}
+                        {% endif %}
+                    </div>
+                    
+
+                    <div class='form-group'>
+                        <label class="form-control-label">PASSWORD</label>
+                        <!-- {{ form.password.label(class='form-control-label') }} -->
+    
+                        {% if form.password.errors %}
+                            {{ form.password(class='form-control form-control-lg is-invalid') }}
+                            <div class='invalid-feedback'>
+                                 {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                 {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.password(class='form-control form-control-lg') }}
+                        {% endif %}
+                    </div>
+
+                    
+
+                    <div class="col-lg-12 loginbttm">
+                        <div class="col-lg-6 login-btm login-text">
+                            <!-- Error Message -->
+                        </div>
+                        
+                        
+                        <div>s</div>
+                        <div class='form-group'>
+                            {{ form.submit(class='btn btn-outline-primary') }}
+                            <small class='text-muted ml-2'>
+                                <a href="#">Forgot Password?</a>
+                            </small>
+                        </div>
+                        <!-- <div class='form-check' style="color:white"> 
+                            {{ form.remember(class='form-check-input') }}
+                            {{ form.remember.label(class='form-check-label') }}
+                        </div> -->
+                        
+                    </div>
+                </form>
+                <div class='border-top pt-3'>
+                    <small class='text-muted'>
+                        No account yet? <a href='#' class='ml-2'>Register</a> 
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2"></div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+body{
+  background-color: #ecf0f5 !important;
+}
+
+.hrCustom{
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 4px solid rgba(60, 141, 188, 0.75);
+}
