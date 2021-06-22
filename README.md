@@ -37,7 +37,7 @@ Pandas Dataframe |
 
 1. Clone the repo
    ```sh
-   git clone repository
+   git clone https://github.com/Sagi10/Project-Bigdata.git
    ```
 2. Create a Environment
    ```sh
